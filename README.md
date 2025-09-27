@@ -1,8 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js Landing Kit
 
-## Getting Started
+A modern, high-performance boilerplate for creating stunning landing pages with Next.js.
 
-First, run the development server:
+## ✨ Features
+
+- **⚡ Next.js 14** with App Router for optimal performance
+- **🎨 TailwindCSS** with custom design system
+- **📱 Fully Responsive** components
+- **🔍 SEO Optimized** out of the box
+- **📝 TypeScript** for type safety
+- **🎭 Framer Motion** for smooth animations
+- **📧 Email Integration** with Resend
+- **🛠️ Developer Experience** with ESLint + Prettier
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm/yarn/pnpm
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/[your-username]/nextjs-landing-kit.git
+cd nextjs-landing-kit
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. **Set up environment variables**
+
+```bash
+cp .env.example .env.local
+```
+
+4. **Start development server**
 
 ```bash
 npm run dev
@@ -10,27 +53,79 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Environment Variables
 
-## Learn More
+Create a `.env.local` file in the root directory:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Email Service (Resend)
+RESEND_API_KEY=your_resend_api_key_here
+FROM_EMAIL=noreply@yourdomain.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_SITE_NAME=Your Landing Page
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Email Setup
 
-## Deploy on Vercel
+1. Sign up for [Resend](https://resend.com)
+2. Get your API key from the dashboard
+3. Add your API key to `.env.local`
+4. Configure your sender domain
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── api/               # API routes
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/
+│   ├── ui/                # Reusable UI components
+│   ├── sections/          # Page sections
+│   └── layout/            # Layout components
+├── lib/
+│   ├── utils.ts           # Utility functions
+│   ├── validations.ts     # Zod schemas
+│   └── email.ts           # Email configuration
+├── hooks/                 # Custom React hooks
+├── types/                 # TypeScript definitions
+└── data/                  # Static data
+```
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** TailwindCSS
+- **Forms:** React Hook Form + Zod
+- **Animations:** Framer Motion
+- **Email:** Resend
+- **Code Quality:** ESLint + Prettier
+
+## 🎯 Use Cases
+
+Perfect for:
+
+- **Business Landing Pages** - Services, products, startups
+- **Real Estate** - Property showcases, agent profiles
+- **Events** - Conferences, workshops, fairs
+- **E-commerce** - Product launches, promotional campaigns
+- **Portfolio** - Personal brands, agencies
+- **Lead Generation** - Contact forms, newsletters
+
+---
+
+**Happy coding! 🎉**
+
+> Made with ❤️
