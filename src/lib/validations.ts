@@ -1,3 +1,4 @@
+// src/lib/validations.ts
 import { z } from "zod";
 
 // Contact form validation schema
@@ -39,6 +40,22 @@ export const contactFormSchema = z.object({
     .string()
     .min(10, "Message must be at least 10 characters")
     .max(1000, "Message must be less than 1000 characters"),
+
+  date: z
+    .string()
+    .optional()
+    .refine(
+      (val) => !val || /^\d{4}-\d{2}-\d{2}$/.test(val),
+      "Date must be in YYYY-MM-DD format"
+    ),
+
+  time: z
+    .string()
+    .optional()
+    .refine(
+      (val) => !val || /^\d{2}:\d{2}$/.test(val),
+      "Time must be in HH:MM format"
+    ),
 });
 
 // Newsletter validation schema
